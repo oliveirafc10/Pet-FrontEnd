@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://sospet.herokuapp.com'
+  baseURL: 'https://sospet.herokuapp.com/'
 })
 
 export default api;
