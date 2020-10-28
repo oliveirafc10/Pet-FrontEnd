@@ -5,22 +5,36 @@
    margin: 32px auto;
  }
  .profile-conteiner header {
-   display: flex;
-   align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: 
+   "img button"
  }
- .profile-conteiner header span {
-   font-size: 20px;
-   margin-left: 24px;
- }
+
  .profile-conteiner header img {
-   height: 64px;
+  grid-area: img;
+  height: 64px;
+}
+
+ .profile-conteiner header span {
+   grid-area: span;
+   font-size: 20px;
+   margin-top: 5px;
  }
- .profile-conteiner header a {
+
+ .profile-conteiner .buttons-container {
+   display: flex;
+   margin: 0;
+  justify-content: flex-end;
+ }
+
+
+ .profile-conteiner .buttons-container a {
    width: 260px;
-   margin-left: auto;
    margin-top: 0;
  }
- .profile-conteiner header button {
+ .profile-conteiner .buttons-container button {
    height: 60px;
    width: 60px;
    border-radius: 4px;
@@ -32,7 +46,7 @@
    border-color: #999;
  }
  .profile-conteiner h1 {
-   margin-top: 80px;
+   margin-top: 30px;
    margin-bottom: 24px;
  }
  .profile-conteiner ul {
@@ -70,3 +84,62 @@
    line-height: 21px;
    font-size: 16px;
  }
+
+ @media (max-width: 699px) {
+  .profile-conteiner {
+    margin: 0;
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .profile-conteiner header {
+    display: grid;
+    justify-content: space-between;
+  }
+
+  .profile-conteiner header span {
+    font-size: 12px;
+  }
+
+  .profile-conteiner .buttons-container a {
+     width: 100px;
+     height: 40px;
+     font-size: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .profile-conteiner .buttons-container button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .profile-conteiner ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #dcdce6;
+    padding: 4px;
+  }
+
+  .profile-conteiner ul li {
+    padding: 8px;
+  }
+
+  .profile-conteiner ul li strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #41414d;
+    font-size: 12px;
+  }
+  .profile-conteiner ul li p + strong {
+    margin-top: 12px;
+  }
+
+  .profile-conteiner ul li p {
+    color: #737380;
+    line-height: 15px;
+    font-size: 14px;
+  }
+
+}

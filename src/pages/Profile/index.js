@@ -48,13 +48,16 @@ export default function Profile() {
     <div className="profile-conteiner">
       <header>
          <img src={logoImg} alt="Sejam os Heroes" />
-         <span>Bem vinda, {ongNome}</span>
 
-         <Link className="button" to="/casos/novo">
+         <div className="buttons-container">
+             <Link className="button" to="/casos/novo">
                 Cadastrar novo caso</Link>
-         <button onClick={handleLogout} type="button">
-             <FiPower size={18} color="#e02041" />
-         </button>
+             <button onClick={handleLogout} type="button">
+                 <FiPower size={18} color="#e02041" />
+              </button>
+         </div>
+
+         <span>Bem vinda: <br/>{ongNome} </span>
       </header>
       <h1>Casos cadastrados</h1>
       <ul>

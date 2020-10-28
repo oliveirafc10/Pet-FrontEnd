@@ -54,17 +54,20 @@ async function handlenovocaso(e) {
          </section>
          <form onSubmit={handlenovocaso}>
             <input 
+            type="text"
               placeholder="Título do caso"
               value={titulo}
               onChange= {e => setTitulo(e.target.value)}
               />
             <textarea 
+            type="text"
               placeholder="Descrição"
               value={descricao}
               onChange= {e => setDescricao(e.target.value)}
             />
            <input 
-              placeholder="Valor em reais"
+              type="number"
+              placeholder="Valor em reais   $,$$"
               value={valor}
               onChange= {e => setValor(e.target.value)}
               />

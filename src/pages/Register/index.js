@@ -29,7 +29,7 @@ export default function Register() {
     try {
       const response = await api.post('ongs', data);
     
-      alert(`Seu ID de acesso: ${response.data.id}`)
+      alert(`Por favor anote seu ID de acesso: ${response.data.id}`)
       
       history.push('/')
       
@@ -54,6 +54,7 @@ export default function Register() {
              Não tenho cadastro
            </Link>
          </section>
+
          <form onSubmit={handleRegister}>
             <input 
                placeholder="Nome da ONG"
@@ -67,6 +68,7 @@ export default function Register() {
               onChange={e => setEmail(e.target.value)}
             />
             <input 
+            type="number"
               placeholder="WhatsApp"
               value={whatsapp}
               onChange={e => setWhatsApp(e.target.value)}
